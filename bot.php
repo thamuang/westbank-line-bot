@@ -11,7 +11,7 @@
       // Reply only when message sent is in 'text' format
       if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
         // Reply keyword
-        $keyword = 'BOT';
+        $keyword = 'ขอข้อมูลน้ำดิบ';
         // Get text sent
         $text = $event['message']['text'];
         if (strpos($text, $keyword) !== false) {
@@ -20,7 +20,7 @@
           // Build message to reply back
           $messages = [
             'type' => 'text',
-            'text' => 'Hello !'
+            'text' => 'แก่มาก ๆ ครับ'
           ];
           // Make a POST Request to Messaging API to reply to sender
           $url = 'https://api.line.me/v2/bot/message/reply';
